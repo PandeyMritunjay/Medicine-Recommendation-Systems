@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Medicine Recommendation System</title>
+</head>
+<body>
+    <h1>Welcome to Medicine Recommendation System</h1>
+    <form id="medicineForm">
+        <label for="medicineSelect">Select a Medicine:</label>
+        <select id="medicineSelect" name="medicineSelect">
+            {% for medicine in medicines %}
+                <option value="{{ medicine }}">{{ medicine }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" id="recommendButton">Recommend</button>
+    </form>
+    <div id="recommendations"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#medicineForm').submit(function(event) {
+                event.preventDefault();
+                var userInput = $('#medicineSelect').val();
+                $.ajax({
+                    type: 'POST',
+                    contentType: 'application/json',
+                    url: '/recommend',
+                    data: JSON.stringify({ input: userInput }),
+                    success: function(response) {
+                        var recommendations = response.recommendations;
+                        var html = '<h2>Recommended Medicines:</h2><ul>';
+                        recommendations.forEach(function(medicine) {
+                            html += '<li>' + medicine + '</li>';
+                        });
+                        html += '</ul>';
+                        $('#recommendations').html(html);
+                    },
+                    error: function(xhr, textStatus, errorThrown) {
+                        console.log('Error:', errorThrown);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
