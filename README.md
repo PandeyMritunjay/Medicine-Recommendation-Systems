@@ -9,6 +9,9 @@ This project develops a machine learning-based drug recommendation system aimed 
 - __Resource Efficiency__: Optimizes the use of medical resources by providing accurate and timely recommendations.
 - __Privacy and Integrity__: Ensures the privacy of patient data while maintaining the integrity of medical advisories.
 
+## Dataset : 
+https://www.kaggle.com/code/mpwolke/medicine-recommendation/data
+
 ## Image
 
 ![image](https://github.com/PandeyMritunjay/Medicine-Recommendation-Systems/assets/99710180/7efc8919-3800-4733-bd51-c0b65fc59999)
