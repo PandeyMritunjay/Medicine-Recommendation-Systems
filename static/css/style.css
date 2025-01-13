@@ -1,0 +1,94 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('/static/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* Heading */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-shadow: 2px 2px #ddd;
+}
+
+/* Labels and inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Results section */
+.results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.results h3 {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.results li img {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
